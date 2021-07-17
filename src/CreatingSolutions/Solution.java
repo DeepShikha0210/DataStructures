@@ -1,0 +1,6 @@
+package CreatingSolutions;
+
+class Solution {
+
+
+}
