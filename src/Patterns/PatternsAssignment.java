@@ -179,27 +179,57 @@ public class PatternsAssignment{
             z--;
         }
     }
-    public static void pattern6(int N){
+    public static void pattern6(int N) {
 
-        int startValue=1;
-        for(int i=1; i<= N ; i++){
-            for(int j = startValue; j< startValue+N; j++){
+        int startValue = 1;
+        for (int i = 1; i <= N; i++) {
+            for (int j = startValue; j < startValue + N; j++) {
                 System.out.print(j + " ");
             }
             System.out.println();
-            if(i == (N+1)/2){
-                if(N%2 !=0)
-                    startValue=N*(N-2)+1;
+            if (i == (N + 1) / 2) {
+                if (N % 2 != 0)
+                    startValue = N * (N - 2) + 1;
                 else
-                    startValue=N*(N-1)+1;
-            }
-            else if(i > (N+1)/2)
-                   startValue=startValue-2*N;
+                    startValue = N * (N - 1) + 1;
+            } else if (i > (N + 1) / 2)
+                startValue = startValue - 2 * N;
             else
-                   startValue=startValue+2*N;
+                startValue = startValue + 2 * N;
         }
-
     }
+
+        public static void pattern7(int N){
+
+        int num = N;
+        int count = 2*N-1;
+        for(int i =1; i<= 2*N-1; i++){
+
+            for(int j =N; j > num; j--)
+                System.out.print(j + " ");
+
+            for(int j =1; j <= count; j++)
+                System.out.print(num + " ");
+
+            for(int j =num+1; j <= N; j++)
+                System.out.print(j + " ");
+
+            if(i < N){
+                num--;
+                count = count-2;
+            }
+
+            else{
+                num++;
+                count=count+2;
+            }
+
+            System.out.println();
+        }
+    }
+
+
+
 
 
     public static void main(String[] args) {
@@ -207,7 +237,8 @@ public class PatternsAssignment{
        // pattern2(4);
         //pattern3(4);
        // pattern4(11);
-        pattern6(4);
+        //pattern6(4);
+        pattern7(4);
     }
 }
 

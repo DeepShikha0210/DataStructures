@@ -1,13 +1,17 @@
 package CreatingSolutions;
 
-    public class Pair<I extends Number, I1 extends Number> {
-        int first;
-        int second;
+    public class Pair<Integer>  {
+        int index;
+        int value;
 
-        Pair() { first = 0; second = 0; }
-        public Pair(int first, int second) {
-            this.first = first;
-            this.second = second;
+        Pair() {
+            index = 0;
+            value = 0;
+        }
+
+        public Pair(int index, int value) {
+            this.index = index;
+            this.value = value;
         }
     }
 
