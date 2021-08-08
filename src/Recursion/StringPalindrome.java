@@ -1,6 +1,6 @@
+package Recursion;
 
-
-public class Solution {
+public class StringPalindrome {
 
     public static boolean isStringPalindrome(String input) {
         // Write your code here
