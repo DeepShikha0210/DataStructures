@@ -2,12 +2,7 @@ package Sorting;
 
 public class QuickSort {
     public static void quickSort(int[] input) {
-        /* Your class should be named Solution
-         * Don't write main().
-         * Don't read input, it is passed as function argument.
-         * No need to print or return the output.
-         * Taking input and printing output is handled automatically.
-         */
+
         quickSort(input, 0, input.length-1);
     }
 
@@ -31,10 +26,11 @@ public class QuickSort {
             if (a[i] <= pivotElement)
                 smallerNumberCount++;
         }
-        /*
+        /*SWAP Function
         int temp = a[startIndex+ smallerNumberCount];
         a[startIndex+smallerNumberCount]=pivotElement;
-        a[startIndex] = temp; */
+        a[startIndex] = temp;
+        */
         int pivotPosition = startIndex+smallerNumberCount;
         swap(pivotPosition, startIndex, a);
 
