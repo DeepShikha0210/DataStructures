@@ -5,10 +5,10 @@ public class StringPermutations {
     // Function to print all the permutations of str
     public static void permutations(String input){
         // Write your code here
-        printPermutn(input, "");
+        permutations(input, "");
     }
 
-    static void printPermutn(String str, String ans) {
+    public static void permutations(String str, String ans) {
 
         // If string is empty
         if (str.length() == 0) {
@@ -26,13 +26,13 @@ public class StringPermutations {
             String ros = str.substring(0, i) + str.substring(i + 1);
 
             // Recurvise call
-            printPermutn(ros, ans + ch);
+            permutations(ros, ans + ch);
         }
     }
 
     // Driver code
     public static void main(String[] args) {
         String s = "abb";
-        printPermutn(s, "");
+        permutations(s);
     }
 }
