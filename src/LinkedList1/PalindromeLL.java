@@ -9,7 +9,7 @@ public class PalindromeLL {
         LinkedListNode<Integer> slow = head;
         LinkedListNode<Integer> fast = head;
 
-        while(fast != null && fast.next != null){
+        while(fast != null && fast.next != null){     //returns the second mid in even case
             slow = slow.next;
             fast = fast.next.next;
         }
