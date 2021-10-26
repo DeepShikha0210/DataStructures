@@ -5,7 +5,7 @@ public class Pair<T, V> { // both pair values can be of same type or different t
     private T first;
     private V second;
 
-    Pair(T first, V second){
+    public Pair(T first, V second){
         this.first = first;
         this.second = second;
     }
